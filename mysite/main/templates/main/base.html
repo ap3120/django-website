@@ -34,12 +34,18 @@ body {
                         <li class="nav-item">
                             <a class="nav-link" href="/create">Create</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class='nav-item'>
+                            <a class='nav-link' href='/logout'>Logout</a>
+                        </li>
+                        {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="/register">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/login">Login</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -49,7 +55,11 @@ body {
         <div class="main">
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <h1 class="mt-2">ToDoList Website</h1>
+                    {% if user.is_authenticated %}
+                        <h1 class='mt-2'>Welcome {{user}}!</h1>
+                    {% else %}
+                        <h1 class="mt-2">ToDoList Website</h1>
+                    {% endif %}
                     <hr class="mt-0 mb-4">
                     {% block content %}
                     {% endblock %}

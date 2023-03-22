@@ -36,7 +36,7 @@ def index(request, id):
     return render(request, "main/view.html")
 
 def create(request):
-    if request.method == "POST" and user.is_authenticated:
+    if request.method == "POST" and request.user.is_authenticated:
         form = CreateListForm(request.POST)
 
         if form.is_valid():

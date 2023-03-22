@@ -15,6 +15,7 @@ staticfiles/
 
 # Ignore database files
 db.sqlite3
+test_db.sqlite3
 
 # Ignore log files
 *.log

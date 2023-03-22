@@ -1,0 +1,32 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore local development settings
+*/settings/local.py
+
+# Ignore media files
+media/
+
+# Ignore static files
+staticfiles/
+
+# Ignore database files
+db.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore backup files
+*.bak
+
+# Ignore cache files
+__pycache__/
+
+# Ignore testing files
+.tox/
+
+*.swp
+
